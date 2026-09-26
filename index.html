@@ -1,232 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mama, mir gehört die Welt.</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-background:linear-gradient(
-135deg,
-#04152e 0%,
-#08244c 50%,
-#0f3768 100%
-);
-
-font-family:Georgia, serif;
-
-color:white;
-
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-padding:40px;
-
-overflow-x:hidden;
-}
-
-.container{
-
-max-width:900px;
-text-align:center;
-}
-
-.small{
-
-font-size:16px;
-letter-spacing:3px;
-
-color:#d4af37;
-
-text-transform:uppercase;
-
-margin-bottom:25px;
-}
-
-h1{
-
-font-size:clamp(3rem,8vw,6rem);
-
-line-height:1.1;
-
-margin-bottom:30px;
-}
-
-.subtitle{
-
-font-size:clamp(1.1rem,3vw,1.5rem);
-
-line-height:1.8;
-
-max-width:700px;
-
-margin:auto;
-
-color:#dbe4f3;
-}
-
-.highlight{
-
-color:#d4af37;
-
-font-style:italic;
-}
-
-.buttons{
-
-margin-top:50px;
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-}
-
-.btn-primary{
-
-background:#d4af37;
-
-color:#04152e;
-
-padding:18px 40px;
-
-border-radius:12px;
-
-text-decoration:none;
-
-font-size:18px;
-
-font-weight:bold;
-
-transition:0.3s;
-}
-
-.btn-primary:hover{
-
-transform:translateY(-3px);
-}
-
-.btn-secondary{
-
-border:2px solid #d4af37;
-
-color:#d4af37;
-
-padding:18px 40px;
-
-border-radius:12px;
-
-text-decoration:none;
-
-font-size:18px;
-
-font-weight:bold;
-
-transition:0.3s;
-}
-
-.btn-secondary:hover{
-
-background:#d4af37;
-color:#04152e;
-}
-
-.quote{
-
-margin-top:60px;
-
-font-size:22px;
-
-color:#ffffff90;
-
-max-width:650px;
-
-margin-left:auto;
-margin-right:auto;
-line-height:1.8;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-<p class="small">
-Das öffentliche Tagebuch einer Gründerin
-</p>
-
-<h1>
-Mama,<br>
-mir gehört die Welt.
-</h1>
-
-<p class="subtitle">
-
-Als Kind sagte ich oft:
-
-<span class="highlight">
-„Mama, mir gehört später die Welt.“
-</span>
-
-<br><br>
-
-Heute bin ich 26.
-
-Ich habe studiert, einen sicheren Karriereweg eingeschlagen,
-ihn hinterfragt und mich entschieden,
-meinen eigenen Weg zu gehen.
-
-Dieses Buch erzählt ungefiltert,
-was passiert, wenn man sich nie erklären lässt,
-was angeblich nicht möglich ist.
-
-</p>
-
-<div class="buttons">
-
-kapitel1.html
-📖 Erstes Kapitel lesen
-</a>
-
-https://instagram.com/DEINPROFIL
-🚀 Entstehung begleiten
-</a>
-
-</div>
-
-<p class="quote">
-
-Nicht für Menschen,
-die sich mit dem Durchschnitt zufriedengeben.
-
-Sondern für diejenigen,
-die tief in sich spüren,
-dass noch mehr möglich ist.
-
-</p>
-
-</div>
-
-</body>
-
-</html>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Mama, mir gehört die Welt. Ein Buch über große Visionen, Mut und den eigenen Weg."
+    >
+
+    <meta name="theme-color" content="#020b1d">
+
+    <title>Mama, mir gehört die Welt.</title>
+
+    <!-- Hochwertige Schriftarten -->
+    https://fonts.googleapis.com
+    https://fonts.gstatic.com
+
+    <link
+        href="https://fonts.googleapismorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600&display=swap
+
+    <style>
+
+        /* ========================================
+           GRUNDEINSTELLUNGEN
+        ======================================== */
+
+        :root {
+            --night: #020817;
+            --navy: #051633;
+            --royal: #0a2f68;
+            --blue-light: #1855a0;
+
+            --gold: #d9b95b;
+            --gold-light: #f3df9a;
+            --gold-dark: #a77b20;
+
+            --white: #ffffff;
+            --soft-white: #e9eef8;
+            --muted: #aab7cc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: var(--night);
+            color: var(--white);
+            font-family: "Manrope", sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* ========================================
+           ANIMIERTER HINTERGRUND
+        ======================================== */
+
+        .page-background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 5%,
+                    rgba(25, 84, 166, 0.42),
+                    transparent 34%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(15, 62, 126, 0.25),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 90% 70%,
+                    rgba(5, 32, 78, 0.4),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    145deg,
+                    #020817 0%,
+                    #03122d 48%,
+                    #061d42 100%
+                );
+        }
+
+        .page-background::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.018) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.018) 1px,
+                    transparent 1px
+                );
+
+            background
